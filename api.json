@@ -1495,6 +1495,19 @@
 				]
 			},
 			{
+				"name": "get_tracker_id",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
 				"name": "get_tracks_orientation",
 				"return_type": "bool",
 				"is_editor": false,
@@ -2529,6 +2542,56 @@
 		"signals": [
 		],
 		"methods": [
+			{
+				"name": "_compute_cost",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "from_id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_estimate_cost",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "from_id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
 			{
 				"name": "add_point",
 				"return_type": "void",
@@ -14094,6 +14157,31 @@
 					{
 						"name": "new_name",
 						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "replace_node",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "node",
+						"type": "AnimationNode",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -33183,6 +33271,19 @@
 		],
 		"methods": [
 			{
+				"name": "_texture_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
 				"name": "_update_render_thread",
 				"return_type": "void",
 				"is_editor": false,
@@ -45729,7 +45830,26 @@
 						"default_value": ""
 					},
 					{
-						"name": "pass",
+						"name": "password",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "parse",
+				"return_type": "enum.Error",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "data",
 						"type": "String",
 						"has_default_value": false,
 						"default_value": ""
@@ -45798,7 +45918,7 @@
 						"default_value": ""
 					},
 					{
-						"name": "pass",
+						"name": "password",
 						"type": "String",
 						"has_default_value": false,
 						"default_value": ""
@@ -52491,6 +52611,25 @@
 				]
 			},
 			{
+				"name": "add_ios_project_static_lib",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "path",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
 				"name": "add_shared_object",
 				"return_type": "void",
 				"is_editor": false,
@@ -55248,6 +55387,19 @@
 				]
 			},
 			{
+				"name": "get_file_system_dock",
+				"return_type": "FileSystemDock",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
 				"name": "get_inspector",
 				"return_type": "EditorInspector",
 				"is_editor": false,
@@ -56196,7 +56348,7 @@
 			},
 			{
 				"name": "get_plugin_icon",
-				"return_type": "Object",
+				"return_type": "Texture",
 				"is_editor": false,
 				"is_noscript": false,
 				"is_const": false,
@@ -63234,6 +63386,64 @@
 		]
 	},
 	{
+		"name": "ExternalTexture",
+		"base_class": "Texture",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "size",
+				"type": "Vector2",
+				"getter": "get_size",
+				"setter": "set_size",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_external_texture_id",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_size",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "size",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
 		"name": "FileDialog",
 		"base_class": "ConfirmationDialog",
 		"api_type": "core",
@@ -63971,6 +64181,921 @@
 					"ACCESS_FILESYSTEM": 2
 				}
 			}
+		]
+	},
+	{
+		"name": "FileSystemDock",
+		"base_class": "VBoxContainer",
+		"api_type": "tools",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": false,
+		"is_reference": false,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+			{
+				"name": "display_mode_changed",
+				"arguments": [
+				]
+			},
+			{
+				"name": "file_removed",
+				"arguments": [
+					{
+						"name": "file",
+						"type": "String",
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "files_moved",
+				"arguments": [
+					{
+						"name": "old_file",
+						"type": "String",
+						"default_value": ""
+					},
+					{
+						"name": "new_file",
+						"type": "String",
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "folder_moved",
+				"arguments": [
+					{
+						"name": "old_folder",
+						"type": "String",
+						"default_value": ""
+					},
+					{
+						"name": "new_file",
+						"type": "String",
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "folder_removed",
+				"arguments": [
+					{
+						"name": "folder",
+						"type": "String",
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "inherit",
+				"arguments": [
+					{
+						"name": "file",
+						"type": "String",
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "instance",
+				"arguments": [
+					{
+						"name": "files",
+						"type": "PoolStringArray",
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"methods": [
+			{
+				"name": "_bw_history",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_duplicate_operation_confirm",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_feature_profile_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_file_list_activate_file",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_list_gui_input",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "InputEvent",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_list_rmb_option",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "option",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_list_rmb_pressed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_list_rmb_select",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_list_thumbnail_done",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Texture",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg2",
+						"type": "Texture",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg3",
+						"type": "Variant",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_multi_selected",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_file_removed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_folder_removed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_fs_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_fw_history",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_make_dir_confirm",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_make_scene_confirm",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_move_operation_confirm",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "to_path",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "overwrite",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "False"
+					}
+				]
+			},
+			{
+				"name": "_move_with_overwrite",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_navigate_to_path",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "False"
+					}
+				]
+			},
+			{
+				"name": "_preview_invalidated",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_rename_operation_confirm",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_rescan",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_resource_created",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_search_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Control",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_select_file",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_toggle_file_display",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_toggle_split_mode",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_tree_activate_file",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_tree_empty_selected",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_tree_gui_input",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "InputEvent",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_tree_multi_selected",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Object",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg2",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_tree_rmb_empty",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_tree_rmb_option",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "option",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_tree_rmb_select",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_tree_thumbnail_done",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Texture",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg2",
+						"type": "Texture",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg3",
+						"type": "Variant",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "_update_import_dock",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_update_tree",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "PoolStringArray",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg2",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg3",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "can_drop_data_fw",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Variant",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg2",
+						"type": "Control",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "drop_data_fw",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Variant",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg2",
+						"type": "Control",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_drag_data_fw",
+				"return_type": "Variant",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "Control",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "navigate_to_path",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
 		]
 	},
 	{
@@ -67773,6 +68898,16 @@
 			},
 			{
 				"name": "node_selected",
+				"arguments": [
+					{
+						"name": "node",
+						"type": "Node",
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "node_unselected",
 				"arguments": [
 					{
 						"name": "node",
@@ -75275,7 +76410,7 @@
 		"properties": [
 			{
 				"name": "echo",
-				"type": "int",
+				"type": "bool",
 				"getter": "is_echo",
 				"setter": "set_echo",
 				"index": -1
@@ -78803,6 +79938,25 @@
 					"ICON_MODE_LEFT": 1
 				}
 			}
+		]
+	},
+	{
+		"name": "JNISingleton",
+		"base_class": "Object",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": false,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
 		]
 	},
 	{
@@ -95800,6 +96954,25 @@
 				]
 			},
 			{
+				"name": "has_signal",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "signal",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
 				"name": "has_user_signal",
 				"return_type": "bool",
 				"is_editor": false,
@@ -96868,7 +98041,7 @@
 				"name": "item_focused",
 				"arguments": [
 					{
-						"name": "id",
+						"name": "index",
 						"type": "int",
 						"default_value": ""
 					}
@@ -96878,7 +98051,7 @@
 				"name": "item_selected",
 				"arguments": [
 					{
-						"name": "id",
+						"name": "index",
 						"type": "int",
 						"default_value": ""
 					}
@@ -102355,33 +103528,35 @@
 		"instanciable": false,
 		"is_reference": false,
 		"constants": {
-			"AUDIO_OUTPUT_LATENCY": 28,
+			"AUDIO_OUTPUT_LATENCY": 30,
 			"MEMORY_DYNAMIC": 4,
 			"MEMORY_DYNAMIC_MAX": 6,
 			"MEMORY_MESSAGE_BUFFER_MAX": 7,
 			"MEMORY_STATIC": 3,
 			"MEMORY_STATIC_MAX": 5,
-			"MONITOR_MAX": 29,
+			"MONITOR_MAX": 31,
 			"OBJECT_COUNT": 8,
 			"OBJECT_NODE_COUNT": 10,
 			"OBJECT_ORPHAN_NODE_COUNT": 11,
 			"OBJECT_RESOURCE_COUNT": 9,
-			"PHYSICS_2D_ACTIVE_OBJECTS": 22,
-			"PHYSICS_2D_COLLISION_PAIRS": 23,
-			"PHYSICS_2D_ISLAND_COUNT": 24,
-			"PHYSICS_3D_ACTIVE_OBJECTS": 25,
-			"PHYSICS_3D_COLLISION_PAIRS": 26,
-			"PHYSICS_3D_ISLAND_COUNT": 27,
+			"PHYSICS_2D_ACTIVE_OBJECTS": 24,
+			"PHYSICS_2D_COLLISION_PAIRS": 25,
+			"PHYSICS_2D_ISLAND_COUNT": 26,
+			"PHYSICS_3D_ACTIVE_OBJECTS": 27,
+			"PHYSICS_3D_COLLISION_PAIRS": 28,
+			"PHYSICS_3D_ISLAND_COUNT": 29,
+			"RENDER_2D_DRAW_CALLS_IN_FRAME": 19,
+			"RENDER_2D_ITEMS_IN_FRAME": 18,
 			"RENDER_DRAW_CALLS_IN_FRAME": 17,
 			"RENDER_MATERIAL_CHANGES_IN_FRAME": 14,
 			"RENDER_OBJECTS_IN_FRAME": 12,
 			"RENDER_SHADER_CHANGES_IN_FRAME": 15,
 			"RENDER_SURFACE_CHANGES_IN_FRAME": 16,
-			"RENDER_TEXTURE_MEM_USED": 19,
-			"RENDER_USAGE_VIDEO_MEM_TOTAL": 21,
-			"RENDER_VERTEX_MEM_USED": 20,
+			"RENDER_TEXTURE_MEM_USED": 21,
+			"RENDER_USAGE_VIDEO_MEM_TOTAL": 23,
+			"RENDER_VERTEX_MEM_USED": 22,
 			"RENDER_VERTICES_IN_FRAME": 13,
-			"RENDER_VIDEO_MEM_USED": 18,
+			"RENDER_VIDEO_MEM_USED": 20,
 			"TIME_FPS": 0,
 			"TIME_PHYSICS_PROCESS": 2,
 			"TIME_PROCESS": 1
@@ -102433,18 +103608,20 @@
 					"RENDER_SHADER_CHANGES_IN_FRAME": 15,
 					"RENDER_SURFACE_CHANGES_IN_FRAME": 16,
 					"RENDER_DRAW_CALLS_IN_FRAME": 17,
-					"RENDER_VIDEO_MEM_USED": 18,
-					"RENDER_TEXTURE_MEM_USED": 19,
-					"RENDER_VERTEX_MEM_USED": 20,
-					"RENDER_USAGE_VIDEO_MEM_TOTAL": 21,
-					"PHYSICS_2D_ACTIVE_OBJECTS": 22,
-					"PHYSICS_2D_COLLISION_PAIRS": 23,
-					"PHYSICS_2D_ISLAND_COUNT": 24,
-					"PHYSICS_3D_ACTIVE_OBJECTS": 25,
-					"PHYSICS_3D_COLLISION_PAIRS": 26,
-					"PHYSICS_3D_ISLAND_COUNT": 27,
-					"AUDIO_OUTPUT_LATENCY": 28,
-					"MONITOR_MAX": 29
+					"RENDER_2D_ITEMS_IN_FRAME": 18,
+					"RENDER_2D_DRAW_CALLS_IN_FRAME": 19,
+					"RENDER_VIDEO_MEM_USED": 20,
+					"RENDER_TEXTURE_MEM_USED": 21,
+					"RENDER_VERTEX_MEM_USED": 22,
+					"RENDER_USAGE_VIDEO_MEM_TOTAL": 23,
+					"PHYSICS_2D_ACTIVE_OBJECTS": 24,
+					"PHYSICS_2D_COLLISION_PAIRS": 25,
+					"PHYSICS_2D_ISLAND_COUNT": 26,
+					"PHYSICS_3D_ACTIVE_OBJECTS": 27,
+					"PHYSICS_3D_COLLISION_PAIRS": 28,
+					"PHYSICS_3D_ISLAND_COUNT": 29,
+					"AUDIO_OUTPUT_LATENCY": 30,
+					"MONITOR_MAX": 31
 				}
 			}
 		]
@@ -117056,6 +118233,12 @@
 						"type": "bool",
 						"has_default_value": true,
 						"default_value": "True"
+					},
+					{
+						"name": "destination",
+						"type": "String",
+						"has_default_value": true,
+						"default_value": ""
 					}
 				]
 			},
@@ -129151,6 +130334,13 @@
 				"getter": "get_code",
 				"setter": "set_code",
 				"index": -1
+			},
+			{
+				"name": "custom_defines",
+				"type": "String",
+				"getter": "get_custom_defines",
+				"setter": "set_custom_defines",
+				"index": -1
 			}
 		],
 		"signals": [
@@ -129162,6 +130352,19 @@
 				"is_editor": false,
 				"is_noscript": false,
 				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_custom_defines",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
 				"is_reverse": false,
 				"is_virtual": false,
 				"has_varargs": false,
@@ -129233,6 +130436,25 @@
 				"arguments": [
 					{
 						"name": "code",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_custom_defines",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "custom_defines",
 						"type": "String",
 						"has_default_value": false,
 						"default_value": ""
@@ -129858,6 +131080,19 @@
 			},
 			{
 				"name": "clear_bones",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "clear_bones_global_pose_override",
 				"return_type": "void",
 				"is_editor": false,
 				"is_noscript": false,
@@ -131013,6 +132248,25 @@
 				]
 			},
 			{
+				"name": "get_bind_name",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "bind_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
 				"name": "get_bind_pose",
 				"return_type": "Transform",
 				"is_editor": false,
@@ -131070,6 +132324,31 @@
 					{
 						"name": "bind_count",
 						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_bind_name",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "bind_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "name",
+						"type": "String",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -143395,7 +144674,7 @@
 				"is_from_script": false,
 				"arguments": [
 					{
-						"name": "idx",
+						"name": "tab_idx",
 						"type": "int",
 						"has_default_value": false,
 						"default_value": ""
@@ -150374,6 +151653,7 @@
 			"BIND_BOTTOM": 128,
 			"BIND_BOTTOMLEFT": 64,
 			"BIND_BOTTOMRIGHT": 256,
+			"BIND_CENTER": 16,
 			"BIND_LEFT": 8,
 			"BIND_RIGHT": 32,
 			"BIND_TOP": 2,
@@ -152028,6 +153308,7 @@
 					"BIND_TOP": 2,
 					"BIND_TOPRIGHT": 4,
 					"BIND_LEFT": 8,
+					"BIND_CENTER": 16,
 					"BIND_RIGHT": 32,
 					"BIND_BOTTOMLEFT": 64,
 					"BIND_BOTTOM": 128,
@@ -159276,9 +160557,11 @@
 			"MSAA_4X": 2,
 			"MSAA_8X": 3,
 			"MSAA_DISABLED": 0,
+			"RENDER_INFO_2D_DRAW_CALLS_IN_FRAME": 7,
+			"RENDER_INFO_2D_ITEMS_IN_FRAME": 6,
 			"RENDER_INFO_DRAW_CALLS_IN_FRAME": 5,
 			"RENDER_INFO_MATERIAL_CHANGES_IN_FRAME": 2,
-			"RENDER_INFO_MAX": 6,
+			"RENDER_INFO_MAX": 8,
 			"RENDER_INFO_OBJECTS_IN_FRAME": 0,
 			"RENDER_INFO_SHADER_CHANGES_IN_FRAME": 3,
 			"RENDER_INFO_SURFACE_CHANGES_IN_FRAME": 4,
@@ -160894,7 +162177,9 @@
 					"RENDER_INFO_SHADER_CHANGES_IN_FRAME": 3,
 					"RENDER_INFO_SURFACE_CHANGES_IN_FRAME": 4,
 					"RENDER_INFO_DRAW_CALLS_IN_FRAME": 5,
-					"RENDER_INFO_MAX": 6
+					"RENDER_INFO_2D_ITEMS_IN_FRAME": 6,
+					"RENDER_INFO_2D_DRAW_CALLS_IN_FRAME": 7,
+					"RENDER_INFO_MAX": 8
 				}
 			},
 			{
@@ -167647,16 +168932,18 @@
 			"GLOW_BLEND_MODE_REPLACE": 3,
 			"GLOW_BLEND_MODE_SCREEN": 1,
 			"GLOW_BLEND_MODE_SOFTLIGHT": 2,
+			"INFO_2D_DRAW_CALLS_IN_FRAME": 7,
+			"INFO_2D_ITEMS_IN_FRAME": 6,
 			"INFO_DRAW_CALLS_IN_FRAME": 5,
 			"INFO_MATERIAL_CHANGES_IN_FRAME": 2,
 			"INFO_OBJECTS_IN_FRAME": 0,
 			"INFO_SHADER_CHANGES_IN_FRAME": 3,
 			"INFO_SURFACE_CHANGES_IN_FRAME": 4,
-			"INFO_TEXTURE_MEM_USED": 8,
-			"INFO_USAGE_VIDEO_MEM_TOTAL": 6,
-			"INFO_VERTEX_MEM_USED": 9,
+			"INFO_TEXTURE_MEM_USED": 10,
+			"INFO_USAGE_VIDEO_MEM_TOTAL": 8,
+			"INFO_VERTEX_MEM_USED": 11,
 			"INFO_VERTICES_IN_FRAME": 1,
-			"INFO_VIDEO_MEM_USED": 7,
+			"INFO_VIDEO_MEM_USED": 9,
 			"INSTANCE_FLAG_DRAW_NEXT_FRAME_IF_VISIBLE": 1,
 			"INSTANCE_FLAG_MAX": 2,
 			"INSTANCE_FLAG_USE_BAKED_LIGHT": 0,
@@ -167748,9 +169035,9 @@
 			"TEXTURE_FLAG_REPEAT": 2,
 			"TEXTURE_FLAG_USED_FOR_STREAMING": 2048,
 			"TEXTURE_TYPE_2D": 0,
-			"TEXTURE_TYPE_2D_ARRAY": 2,
-			"TEXTURE_TYPE_3D": 3,
-			"TEXTURE_TYPE_CUBEMAP": 1,
+			"TEXTURE_TYPE_2D_ARRAY": 3,
+			"TEXTURE_TYPE_3D": 4,
+			"TEXTURE_TYPE_CUBEMAP": 2,
 			"VIEWPORT_CLEAR_ALWAYS": 0,
 			"VIEWPORT_CLEAR_NEVER": 1,
 			"VIEWPORT_CLEAR_ONLY_NEXT_FRAME": 2,
@@ -167765,9 +169052,11 @@
 			"VIEWPORT_MSAA_DISABLED": 0,
 			"VIEWPORT_MSAA_EXT_2X": 5,
 			"VIEWPORT_MSAA_EXT_4X": 6,
+			"VIEWPORT_RENDER_INFO_2D_DRAW_CALLS_IN_FRAME": 7,
+			"VIEWPORT_RENDER_INFO_2D_ITEMS_IN_FRAME": 6,
 			"VIEWPORT_RENDER_INFO_DRAW_CALLS_IN_FRAME": 5,
 			"VIEWPORT_RENDER_INFO_MATERIAL_CHANGES_IN_FRAME": 2,
-			"VIEWPORT_RENDER_INFO_MAX": 6,
+			"VIEWPORT_RENDER_INFO_MAX": 8,
 			"VIEWPORT_RENDER_INFO_OBJECTS_IN_FRAME": 0,
 			"VIEWPORT_RENDER_INFO_SHADER_CHANGES_IN_FRAME": 3,
 			"VIEWPORT_RENDER_INFO_SURFACE_CHANGES_IN_FRAME": 4,
@@ -177345,9 +178634,9 @@
 				"name": "TextureType",
 				"values": {
 					"TEXTURE_TYPE_2D": 0,
-					"TEXTURE_TYPE_CUBEMAP": 1,
-					"TEXTURE_TYPE_2D_ARRAY": 2,
-					"TEXTURE_TYPE_3D": 3
+					"TEXTURE_TYPE_CUBEMAP": 2,
+					"TEXTURE_TYPE_2D_ARRAY": 3,
+					"TEXTURE_TYPE_3D": 4
 				}
 			},
 			{
@@ -177375,10 +178664,12 @@
 					"INFO_SHADER_CHANGES_IN_FRAME": 3,
 					"INFO_SURFACE_CHANGES_IN_FRAME": 4,
 					"INFO_DRAW_CALLS_IN_FRAME": 5,
-					"INFO_USAGE_VIDEO_MEM_TOTAL": 6,
-					"INFO_VIDEO_MEM_USED": 7,
-					"INFO_TEXTURE_MEM_USED": 8,
-					"INFO_VERTEX_MEM_USED": 9
+					"INFO_2D_ITEMS_IN_FRAME": 6,
+					"INFO_2D_DRAW_CALLS_IN_FRAME": 7,
+					"INFO_USAGE_VIDEO_MEM_TOTAL": 8,
+					"INFO_VIDEO_MEM_USED": 9,
+					"INFO_TEXTURE_MEM_USED": 10,
+					"INFO_VERTEX_MEM_USED": 11
 				}
 			},
 			{
@@ -177398,7 +178689,9 @@
 					"VIEWPORT_RENDER_INFO_SHADER_CHANGES_IN_FRAME": 3,
 					"VIEWPORT_RENDER_INFO_SURFACE_CHANGES_IN_FRAME": 4,
 					"VIEWPORT_RENDER_INFO_DRAW_CALLS_IN_FRAME": 5,
-					"VIEWPORT_RENDER_INFO_MAX": 6
+					"VIEWPORT_RENDER_INFO_2D_ITEMS_IN_FRAME": 6,
+					"VIEWPORT_RENDER_INFO_2D_DRAW_CALLS_IN_FRAME": 7,
+					"VIEWPORT_RENDER_INFO_MAX": 8
 				}
 			},
 			{
@@ -179397,19 +180690,6 @@
 		],
 		"methods": [
 			{
-				"name": "build",
-				"return_type": "void",
-				"is_editor": false,
-				"is_noscript": false,
-				"is_const": false,
-				"is_reverse": false,
-				"is_virtual": false,
-				"has_varargs": false,
-				"is_from_script": false,
-				"arguments": [
-				]
-			},
-			{
 				"name": "get_expression",
 				"return_type": "String",
 				"is_editor": false,
@@ -179514,10 +180794,10 @@
 		},
 		"properties": [
 			{
-				"name": "editable",
-				"type": "bool",
-				"getter": "is_editable",
-				"setter": "set_editable",
+				"name": "size",
+				"type": "Vector2",
+				"getter": "get_size",
+				"setter": "set_size",
 				"index": -1
 			}
 		],
@@ -179610,25 +180890,6 @@
 				"has_varargs": false,
 				"is_from_script": false,
 				"arguments": [
-				]
-			},
-			{
-				"name": "get_control",
-				"return_type": "Control",
-				"is_editor": false,
-				"is_noscript": false,
-				"is_const": false,
-				"is_reverse": false,
-				"is_virtual": false,
-				"has_varargs": false,
-				"is_from_script": false,
-				"arguments": [
-					{
-						"name": "index",
-						"type": "int",
-						"has_default_value": false,
-						"default_value": ""
-					}
 				]
 			},
 			{
@@ -179761,19 +181022,6 @@
 				]
 			},
 			{
-				"name": "is_editable",
-				"return_type": "bool",
-				"is_editor": false,
-				"is_noscript": false,
-				"is_const": true,
-				"is_reverse": false,
-				"is_virtual": false,
-				"has_varargs": false,
-				"is_from_script": false,
-				"arguments": [
-				]
-			},
-			{
 				"name": "is_valid_port_name",
 				"return_type": "bool",
 				"is_editor": false,
@@ -179825,50 +181073,6 @@
 					{
 						"name": "id",
 						"type": "int",
-						"has_default_value": false,
-						"default_value": ""
-					}
-				]
-			},
-			{
-				"name": "set_control",
-				"return_type": "void",
-				"is_editor": false,
-				"is_noscript": false,
-				"is_const": false,
-				"is_reverse": false,
-				"is_virtual": false,
-				"has_varargs": false,
-				"is_from_script": false,
-				"arguments": [
-					{
-						"name": "control",
-						"type": "Control",
-						"has_default_value": false,
-						"default_value": ""
-					},
-					{
-						"name": "index",
-						"type": "int",
-						"has_default_value": false,
-						"default_value": ""
-					}
-				]
-			},
-			{
-				"name": "set_editable",
-				"return_type": "void",
-				"is_editor": false,
-				"is_noscript": false,
-				"is_const": false,
-				"is_reverse": false,
-				"is_virtual": false,
-				"has_varargs": false,
-				"is_from_script": false,
-				"arguments": [
-					{
-						"name": "enabled",
-						"type": "bool",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -181946,6 +183150,4631 @@
 		]
 	},
 	{
+		"name": "Voxel",
+		"base_class": "Resource",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"GEOMETRY_CUBE": 1,
+			"GEOMETRY_CUSTOM_MESH": 2,
+			"GEOMETRY_MAX": 3,
+			"GEOMETRY_NONE": 0,
+			"SIDE_COUNT": 6,
+			"SIDE_NEGATIVE_X": 1,
+			"SIDE_NEGATIVE_Y": 2,
+			"SIDE_NEGATIVE_Z": 4,
+			"SIDE_POSITIVE_X": 0,
+			"SIDE_POSITIVE_Y": 3,
+			"SIDE_POSITIVE_Z": 5
+		},
+		"properties": [
+			{
+				"name": "collision_aabbs",
+				"type": "Array",
+				"getter": "get_collision_aabbs",
+				"setter": "set_collision_aabbs",
+				"index": -1
+			},
+			{
+				"name": "color",
+				"type": "Color",
+				"getter": "get_color",
+				"setter": "set_color",
+				"index": -1
+			},
+			{
+				"name": "custom_mesh",
+				"type": "Mesh",
+				"getter": "get_custom_mesh",
+				"setter": "set_custom_mesh",
+				"index": -1
+			},
+			{
+				"name": "geometry_type",
+				"type": "int",
+				"getter": "get_geometry_type",
+				"setter": "set_geometry_type",
+				"index": -1
+			},
+			{
+				"name": "material_id",
+				"type": "int",
+				"getter": "get_material_id",
+				"setter": "set_material_id",
+				"index": -1
+			},
+			{
+				"name": "transparent",
+				"type": "bool",
+				"getter": "is_transparent",
+				"setter": "set_transparent",
+				"index": -1
+			},
+			{
+				"name": "voxel_name",
+				"type": "String",
+				"getter": "get_voxel_name",
+				"setter": "set_voxel_name",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_collision_aabbs",
+				"return_type": "Array",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_color",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_custom_mesh",
+				"return_type": "Mesh",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_geometry_type",
+				"return_type": "enum.Voxel::GeometryType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_id",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_material_id",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel_name",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_transparent",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_collision_aabbs",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "aabbs",
+						"type": "Array",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_color",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "color",
+						"type": "Color",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_custom_mesh",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "Mesh",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_geometry_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_id",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_material_id",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_transparent",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "transparent",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel_name",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "Side",
+				"values": {
+					"SIDE_POSITIVE_X": 0,
+					"SIDE_NEGATIVE_X": 1,
+					"SIDE_NEGATIVE_Y": 2,
+					"SIDE_POSITIVE_Y": 3,
+					"SIDE_NEGATIVE_Z": 4,
+					"SIDE_POSITIVE_Z": 5,
+					"SIDE_COUNT": 6
+				}
+			},
+			{
+				"name": "GeometryType",
+				"values": {
+					"GEOMETRY_NONE": 0,
+					"GEOMETRY_CUBE": 1,
+					"GEOMETRY_CUSTOM_MESH": 2,
+					"GEOMETRY_MAX": 3
+				}
+			}
+		]
+	},
+	{
+		"name": "VoxelBoxMover",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_motion",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "motion",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "aabb",
+						"type": "AABB",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "terrain",
+						"type": "Node",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelBuffer",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"CHANNEL_DATA2": 2,
+			"CHANNEL_DATA3": 3,
+			"CHANNEL_DATA4": 4,
+			"CHANNEL_DATA5": 5,
+			"CHANNEL_DATA6": 6,
+			"CHANNEL_DATA7": 7,
+			"CHANNEL_SDF": 1,
+			"CHANNEL_TYPE": 0,
+			"DEPTH_16_BIT": 1,
+			"DEPTH_32_BIT": 2,
+			"DEPTH_64_BIT": 3,
+			"DEPTH_8_BIT": 0,
+			"DEPTH_COUNT": 4,
+			"MAX_CHANNELS": 8
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "clear",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "copy_channel_from",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "other",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "copy_channel_from_area",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "other",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src_min",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src_max",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "dst_min",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "create",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "sx",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "sy",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "sz",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "downscale_to",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "dst",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src_min",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src_max",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "dst_min",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "fill",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "fill_area",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "min",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "max",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "fill_f",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "get_channel_depth",
+				"return_type": "enum.VoxelBuffer::Depth",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_size",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_size_x",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_size_y",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_size_z",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "get_voxel_f",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "get_voxel_tool",
+				"return_type": "VoxelTool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_uniform",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "optimize",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_channel_depth",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "depth",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "set_voxel_f",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "set_voxel_v",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "Depth",
+				"values": {
+					"DEPTH_8_BIT": 0,
+					"DEPTH_16_BIT": 1,
+					"DEPTH_32_BIT": 2,
+					"DEPTH_64_BIT": 3,
+					"DEPTH_COUNT": 4
+				}
+			},
+			{
+				"name": "ChannelId",
+				"values": {
+					"CHANNEL_TYPE": 0,
+					"CHANNEL_SDF": 1,
+					"CHANNEL_DATA2": 2,
+					"CHANNEL_DATA3": 3,
+					"CHANNEL_DATA4": 4,
+					"CHANNEL_DATA5": 5,
+					"CHANNEL_DATA6": 6,
+					"CHANNEL_DATA7": 7,
+					"MAX_CHANNELS": 8
+				}
+			}
+		]
+	},
+	{
+		"name": "VoxelGenerator",
+		"base_class": "VoxelStream",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "generate_block",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "out_buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "origin_in_voxels",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "lod",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelGeneratorFlat",
+		"base_class": "VoxelGenerator",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "channel",
+				"type": "int",
+				"getter": "get_channel",
+				"setter": "set_channel",
+				"index": -1
+			},
+			{
+				"name": "height",
+				"type": "float",
+				"getter": "get_height",
+				"setter": "set_height",
+				"index": -1
+			},
+			{
+				"name": "voxel_type",
+				"type": "int",
+				"getter": "get_voxel_type",
+				"setter": "set_voxel_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_channel",
+				"return_type": "enum.VoxelBuffer::ChannelId",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_height",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel_type",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_channel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_height",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "h",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelGeneratorHeightmap",
+		"base_class": "VoxelGenerator",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "channel",
+				"type": "int",
+				"getter": "get_channel",
+				"setter": "set_channel",
+				"index": -1
+			},
+			{
+				"name": "height_range",
+				"type": "float",
+				"getter": "get_height_range",
+				"setter": "set_height_range",
+				"index": -1
+			},
+			{
+				"name": "height_start",
+				"type": "float",
+				"getter": "get_height_start",
+				"setter": "set_height_start",
+				"index": -1
+			},
+			{
+				"name": "iso_scale",
+				"type": "float",
+				"getter": "get_iso_scale",
+				"setter": "set_iso_scale",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_channel",
+				"return_type": "enum.VoxelBuffer::ChannelId",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_height_range",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_height_start",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_iso_scale",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_channel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_height_range",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "range",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_height_start",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "start",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_iso_scale",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelGeneratorImage",
+		"base_class": "VoxelGeneratorHeightmap",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "blur_enabled",
+				"type": "bool",
+				"getter": "is_blur_enabled",
+				"setter": "set_blur_enabled",
+				"index": -1
+			},
+			{
+				"name": "image",
+				"type": "Image",
+				"getter": "get_image",
+				"setter": "set_image",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_image",
+				"return_type": "Image",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_blur_enabled",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_blur_enabled",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enable",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_image",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "image",
+						"type": "Image",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelGeneratorNoise",
+		"base_class": "VoxelGenerator",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "channel",
+				"type": "int",
+				"getter": "get_channel",
+				"setter": "set_channel",
+				"index": -1
+			},
+			{
+				"name": "height_range",
+				"type": "float",
+				"getter": "get_height_range",
+				"setter": "set_height_range",
+				"index": -1
+			},
+			{
+				"name": "height_start",
+				"type": "float",
+				"getter": "get_height_start",
+				"setter": "set_height_start",
+				"index": -1
+			},
+			{
+				"name": "noise",
+				"type": "OpenSimplexNoise",
+				"getter": "get_noise",
+				"setter": "set_noise",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_channel",
+				"return_type": "enum.VoxelBuffer::ChannelId",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_height_range",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_height_start",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_noise",
+				"return_type": "OpenSimplexNoise",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_channel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_height_range",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "hrange",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_height_start",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "hstart",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_noise",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "noise",
+						"type": "OpenSimplexNoise",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelGeneratorNoise2D",
+		"base_class": "VoxelGeneratorHeightmap",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "curve",
+				"type": "Curve",
+				"getter": "get_curve",
+				"setter": "set_curve",
+				"index": -1
+			},
+			{
+				"name": "noise",
+				"type": "OpenSimplexNoise",
+				"getter": "get_noise",
+				"setter": "set_noise",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_curve",
+				"return_type": "Curve",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_noise",
+				"return_type": "OpenSimplexNoise",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_curve",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "curve",
+						"type": "Curve",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_noise",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "noise",
+						"type": "OpenSimplexNoise",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelGeneratorWaves",
+		"base_class": "VoxelGeneratorHeightmap",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "pattern_offset",
+				"type": "Vector2",
+				"getter": "get_pattern_offset",
+				"setter": "set_pattern_offset",
+				"index": -1
+			},
+			{
+				"name": "pattern_size",
+				"type": "Vector2",
+				"getter": "get_pattern_size",
+				"setter": "set_pattern_size",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_pattern_offset",
+				"return_type": "Vector2",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_pattern_size",
+				"return_type": "Vector2",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_pattern_offset",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "offset",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_pattern_size",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "size",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelLibrary",
+		"base_class": "Resource",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"MAX_VOXEL_TYPES": 65536
+		},
+		"properties": [
+			{
+				"name": "atlas_size",
+				"type": "int",
+				"getter": "get_atlas_size",
+				"setter": "set_atlas_size",
+				"index": -1
+			},
+			{
+				"name": "voxel_count",
+				"type": "int",
+				"getter": "get_voxel_count",
+				"setter": "set_voxel_count",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "bake",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "create_voxel",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_atlas_size",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel",
+				"return_type": "Voxel",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_voxel_count",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_atlas_size",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "square_size",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel_count",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "count",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelLodTerrain",
+		"base_class": "Spatial",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": false,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "collision_lod_count",
+				"type": "int",
+				"getter": "get_collision_lod_count",
+				"setter": "set_collision_lod_count",
+				"index": -1
+			},
+			{
+				"name": "generate_collisions",
+				"type": "bool",
+				"getter": "get_generate_collisions",
+				"setter": "set_generate_collisions",
+				"index": -1
+			},
+			{
+				"name": "lod_count",
+				"type": "int",
+				"getter": "get_lod_count",
+				"setter": "set_lod_count",
+				"index": -1
+			},
+			{
+				"name": "lod_split_scale",
+				"type": "float",
+				"getter": "get_lod_split_scale",
+				"setter": "set_lod_split_scale",
+				"index": -1
+			},
+			{
+				"name": "material",
+				"type": "Material",
+				"getter": "get_material",
+				"setter": "set_material",
+				"index": -1
+			},
+			{
+				"name": "stream",
+				"type": "VoxelStream",
+				"getter": "get_stream",
+				"setter": "set_stream",
+				"index": -1
+			},
+			{
+				"name": "view_distance",
+				"type": "int",
+				"getter": "get_view_distance",
+				"setter": "set_view_distance",
+				"index": -1
+			},
+			{
+				"name": "viewer_path",
+				"type": "NodePath",
+				"getter": "get_viewer_path",
+				"setter": "set_viewer_path",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "_on_stream_params_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "debug_get_block_info",
+				"return_type": "Dictionary",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "block_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "lod",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "debug_get_octrees",
+				"return_type": "Array",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "debug_print_sdf_top_down",
+				"return_type": "Array",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "center",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "extents",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "debug_raycast_block",
+				"return_type": "Array",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "origin",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "dir",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "debug_save_all_modified_blocks",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_block_region_extent",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_block_size",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_collision_lod_count",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_generate_collisions",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_lod_count",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_lod_split_scale",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_material",
+				"return_type": "Material",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_statistics",
+				"return_type": "Dictionary",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_stream",
+				"return_type": "VoxelStream",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_view_distance",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_viewer_path",
+				"return_type": "NodePath",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel_tool",
+				"return_type": "VoxelTool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_collision_lod_count",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "count",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_generate_collisions",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_lod_count",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "lod_count",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_lod_split_scale",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "lod_split_scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_material",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "material",
+						"type": "Material",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_stream",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "stream",
+						"type": "VoxelStream",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_view_distance",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "distance_in_voxels",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_viewer_path",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "path",
+						"type": "NodePath",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "voxel_to_block_position",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "lod_index",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "arg1",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelMap",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "block_to_voxel",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "block_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_block_size",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_buffer_copy",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "min_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "out_buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "get_default_voxel",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "get_voxel",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "c",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "get_voxel_f",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "c",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "get_voxel_v",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "c",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "has_block",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_block_buffer",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "block_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_default_voxel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "channel",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "set_voxel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "c",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "set_voxel_f",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "x",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "c",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "set_voxel_v",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "c",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "0"
+					}
+				]
+			},
+			{
+				"name": "voxel_to_block",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "voxel_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelMesher",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "build_mesh",
+				"return_type": "Mesh",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "voxel_buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_maximum_padding",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_minimum_padding",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelMesherBlocky",
+		"base_class": "VoxelMesher",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_library",
+				"return_type": "VoxelLibrary",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_occlusion_darkness",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_occlusion_enabled",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_library",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "voxel_library",
+						"type": "VoxelLibrary",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_occlusion_darkness",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_occlusion_enabled",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enable",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelMesherDMC",
+		"base_class": "VoxelMesher",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"MESH_DEBUG_DUAL_GRID": 3,
+			"MESH_DEBUG_OCTREE": 2,
+			"MESH_NORMAL": 0,
+			"MESH_WIREFRAME": 1,
+			"SEAM_MARCHING_SQUARE_SKIRTS": 1,
+			"SEAM_NONE": 0,
+			"SIMPLIFY_NONE": 2,
+			"SIMPLIFY_OCTREE_BOTTOM_UP": 0,
+			"SIMPLIFY_OCTREE_TOP_DOWN": 1
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_geometric_error",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_mesh_mode",
+				"return_type": "enum.VoxelMesherDMC::MeshMode",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_seam_mode",
+				"return_type": "enum.VoxelMesherDMC::SeamMode",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_simplify_mode",
+				"return_type": "enum.VoxelMesherDMC::SimplifyMode",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_statistics",
+				"return_type": "Dictionary",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_geometric_error",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "error",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_mesh_mode",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "mode",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_seam_mode",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "mode",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_simplify_mode",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "mode",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "SeamMode",
+				"values": {
+					"SEAM_NONE": 0,
+					"SEAM_MARCHING_SQUARE_SKIRTS": 1
+				}
+			},
+			{
+				"name": "SimplifyMode",
+				"values": {
+					"SIMPLIFY_OCTREE_BOTTOM_UP": 0,
+					"SIMPLIFY_OCTREE_TOP_DOWN": 1,
+					"SIMPLIFY_NONE": 2
+				}
+			},
+			{
+				"name": "MeshMode",
+				"values": {
+					"MESH_NORMAL": 0,
+					"MESH_WIREFRAME": 1,
+					"MESH_DEBUG_OCTREE": 2,
+					"MESH_DEBUG_DUAL_GRID": 3
+				}
+			}
+		]
+	},
+	{
+		"name": "VoxelMesherTransvoxel",
+		"base_class": "VoxelMesher",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "build_transition_mesh",
+				"return_type": "ArrayMesh",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "voxel_buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "direction",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelRaycastResult",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "position",
+				"type": "Vector3",
+				"getter": "get_position",
+				"setter": "",
+				"index": -1
+			},
+			{
+				"name": "previous_position",
+				"type": "Vector3",
+				"getter": "get_previous_position",
+				"setter": "",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_position",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_previous_position",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelStream",
+		"base_class": "Resource",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "emerge_block",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "out_buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "origin_in_voxels",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "lod",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_used_channels_mask",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "immerge_block",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "buffer",
+						"type": "VoxelBuffer",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "origin_in_voxels",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "lod",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelStreamBlockFiles",
+		"base_class": "VoxelStreamFile",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "directory",
+				"type": "String",
+				"getter": "get_directory",
+				"setter": "set_directory",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_directory",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_directory",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "directory",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelStreamFile",
+		"base_class": "VoxelStream",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "fallback_stream",
+				"type": "VoxelStream",
+				"getter": "get_fallback_stream",
+				"setter": "set_fallback_stream",
+				"index": -1
+			},
+			{
+				"name": "save_fallback_output",
+				"type": "bool",
+				"getter": "get_save_fallback_output",
+				"setter": "set_save_fallback_output",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_block_size",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_fallback_stream",
+				"return_type": "VoxelStream",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_save_fallback_output",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_fallback_stream",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "stream",
+						"type": "VoxelStream",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_save_fallback_output",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelStreamRegionFiles",
+		"base_class": "VoxelStreamFile",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "block_size_po2",
+				"type": "int",
+				"getter": "get_region_size_po2",
+				"setter": "set_block_size_po2",
+				"index": -1
+			},
+			{
+				"name": "directory",
+				"type": "String",
+				"getter": "get_directory",
+				"setter": "set_directory",
+				"index": -1
+			},
+			{
+				"name": "lod_count",
+				"type": "int",
+				"getter": "get_lod_count",
+				"setter": "set_lod_count",
+				"index": -1
+			},
+			{
+				"name": "region_size_po2",
+				"type": "int",
+				"getter": "get_region_size_po2",
+				"setter": "set_region_size_po2",
+				"index": -1
+			},
+			{
+				"name": "sector_size",
+				"type": "int",
+				"getter": "get_sector_size",
+				"setter": "set_sector_size",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "convert_files",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "new_settings",
+						"type": "Dictionary",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_block_size_po2",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_directory",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_lod_count",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_region_size",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_region_size_po2",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_sector_size",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_block_size_po2",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_directory",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "directory",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_lod_count",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_region_size_po2",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_sector_size",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelTerrain",
+		"base_class": "Spatial",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": false,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "generate_collisions",
+				"type": "bool",
+				"getter": "get_generate_collisions",
+				"setter": "set_generate_collisions",
+				"index": -1
+			},
+			{
+				"name": "stream",
+				"type": "VoxelStream",
+				"getter": "get_stream",
+				"setter": "set_stream",
+				"index": -1
+			},
+			{
+				"name": "view_distance",
+				"type": "int",
+				"getter": "get_view_distance",
+				"setter": "set_view_distance",
+				"index": -1
+			},
+			{
+				"name": "viewer_path",
+				"type": "NodePath",
+				"getter": "get_viewer_path",
+				"setter": "set_viewer_path",
+				"index": -1
+			},
+			{
+				"name": "voxel_library",
+				"type": "VoxelLibrary",
+				"getter": "get_voxel_library",
+				"setter": "set_voxel_library",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "_on_stream_params_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "block_to_voxel",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "block_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_generate_collisions",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_material",
+				"return_type": "Material",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_statistics",
+				"return_type": "Dictionary",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_stream",
+				"return_type": "VoxelStream",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_view_distance",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_viewer_path",
+				"return_type": "NodePath",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel_library",
+				"return_type": "VoxelLibrary",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel_tool",
+				"return_type": "VoxelTool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_generate_collisions",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_material",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "material",
+						"type": "Material",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_stream",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "stream",
+						"type": "VoxelStream",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_view_distance",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "distance_in_voxels",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_viewer_path",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "path",
+						"type": "NodePath",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel_library",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "library",
+						"type": "VoxelLibrary",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "voxel_to_block",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "voxel_pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VoxelTool",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"MODE_ADD": 0,
+			"MODE_REMOVE": 1,
+			"MODE_SET": 2
+		},
+		"properties": [
+			{
+				"name": "channel",
+				"type": "int",
+				"getter": "get_channel",
+				"setter": "set_channel",
+				"index": -1
+			},
+			{
+				"name": "eraser_value",
+				"type": "int",
+				"getter": "get_eraser_value",
+				"setter": "set_eraser_value",
+				"index": -1
+			},
+			{
+				"name": "mode",
+				"type": "int",
+				"getter": "get_mode",
+				"setter": "set_mode",
+				"index": -1
+			},
+			{
+				"name": "value",
+				"type": "int",
+				"getter": "get_value",
+				"setter": "set_value",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "do_point",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "do_sphere",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "center",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "radius",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_channel",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_eraser_value",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_mode",
+				"return_type": "enum.VoxelTool::Mode",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_value",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_voxel",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_voxel_f",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "raycast",
+				"return_type": "VoxelRaycastResult",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "origin",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "direction",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "max_distance",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "10"
+					}
+				]
+			},
+			{
+				"name": "set_channel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "v",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_eraser_value",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "v",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_mode",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "m",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_value",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "v",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_voxel_f",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "Mode",
+				"values": {
+					"MODE_ADD": 0,
+					"MODE_REMOVE": 1,
+					"MODE_SET": 2
+				}
+			}
+		]
+	},
+	{
 		"name": "WeakRef",
 		"base_class": "Reference",
 		"api_type": "core",
@@ -183061,6 +188890,25 @@
 				"has_varargs": false,
 				"is_from_script": false,
 				"arguments": [
+				]
+			},
+			{
+				"name": "set_no_delay",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
 				]
 			},
 			{
@@ -187623,7 +193471,7 @@
 	},
 	{
 		"name": "_Marshalls",
-		"base_class": "Reference",
+		"base_class": "Object",
 		"api_type": "core",
 		"singleton": true,
 		"singleton_name": "Marshalls",
