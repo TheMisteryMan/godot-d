@@ -3373,6 +3373,3398 @@
 		]
 	},
 	{
+		"name": "AccidentalNoise",
+		"base_class": "Resource",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"BASIS_GRADIENT": 1,
+			"BASIS_SIMPLEX": 2,
+			"BASIS_VALUE": 0,
+			"DISTANCE_EUCLID": 0,
+			"DISTANCE_GREATESTAXIS": 3,
+			"DISTANCE_LEASTAXIS": 2,
+			"DISTANCE_MANHATTAN": 1,
+			"FORMAT_BUMPMAP": 2,
+			"FORMAT_HEIGHTMAP": 0,
+			"FORMAT_NORMALMAP": 1,
+			"FORMAT_TEXTURE": 3,
+			"INTERP_HERMITE": 2,
+			"INTERP_LINEAR": 1,
+			"INTERP_NONE": 0,
+			"INTERP_QUINTIC": 3,
+			"SEAMLESS_NONE": 0,
+			"SEAMLESS_X": 1,
+			"SEAMLESS_XY": 4,
+			"SEAMLESS_XYZ": 7,
+			"SEAMLESS_XZ": 5,
+			"SEAMLESS_Y": 2,
+			"SEAMLESS_YZ": 6,
+			"SEAMLESS_Z": 3
+		},
+		"properties": [
+			{
+				"name": "bumpmap_light",
+				"type": "Vector3",
+				"getter": "get_bumpmap_light",
+				"setter": "set_bumpmap_light",
+				"index": -1
+			},
+			{
+				"name": "bumpmap_spacing",
+				"type": "float",
+				"getter": "get_bumpmap_spacing",
+				"setter": "set_bumpmap_spacing",
+				"index": -1
+			},
+			{
+				"name": "bumpmap_wrapped",
+				"type": "bool",
+				"getter": "is_bumpmap_wrapped",
+				"setter": "set_bumpmap_wrapped",
+				"index": -1
+			},
+			{
+				"name": "expression",
+				"type": "String",
+				"getter": "get_expression",
+				"setter": "set_expression",
+				"index": -1
+			},
+			{
+				"name": "format",
+				"type": "int",
+				"getter": "get_format",
+				"setter": "set_format",
+				"index": -1
+			},
+			{
+				"name": "function",
+				"type": "int",
+				"getter": "get_function",
+				"setter": "set_function",
+				"index": -1
+			},
+			{
+				"name": "last_function",
+				"type": "int",
+				"getter": "get_last_function",
+				"setter": "",
+				"index": -1
+			},
+			{
+				"name": "mode",
+				"type": "int",
+				"getter": "get_mode",
+				"setter": "set_mode",
+				"index": -1
+			},
+			{
+				"name": "normalmap_normalized",
+				"type": "bool",
+				"getter": "is_normalmap_normalized",
+				"setter": "set_normalmap_normalized",
+				"index": -1
+			},
+			{
+				"name": "normalmap_spacing",
+				"type": "float",
+				"getter": "get_normalmap_spacing",
+				"setter": "set_normalmap_spacing",
+				"index": -1
+			},
+			{
+				"name": "normalmap_wrapped",
+				"type": "bool",
+				"getter": "is_normalmap_wrapped",
+				"setter": "set_normalmap_wrapped",
+				"index": -1
+			},
+			{
+				"name": "ranges",
+				"type": "AABB",
+				"getter": "get_ranges",
+				"setter": "set_ranges",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "abs",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "acos",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "add",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "add_sequence",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "base_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "number",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "stride",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "asin",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "atan",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "bias",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "billow",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "interp_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "numoctaves",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "rotation",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					}
+				]
+			},
+			{
+				"name": "billow_layer",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "interp_type_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "rotation",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					},
+					{
+						"name": "angle",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0.5"
+					},
+					{
+						"name": "ax",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0"
+					},
+					{
+						"name": "ay",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0"
+					},
+					{
+						"name": "az",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "cellular_basis",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "f1",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "f2",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "f3",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "f4",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "d1",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "d2",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "d3",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "d4",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "distance_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "clamp",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "clear",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "color",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "color",
+						"type": "Color",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "combine_hsva",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "h_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "s_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "a_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "combine_rgba",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "r_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "g_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "b_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "a_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "constant",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "cos",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "curve_section",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "lowv_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "t0_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "t1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v0_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "divide",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "du",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "spacing_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "dv",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "spacing_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "dw",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "spacing_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "dx",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "spacing_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "dy",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "spacing_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "dz",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "spacing_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "e",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "evaluate",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "expression",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "fbm",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "interp_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "numoctaves",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "rotation",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					}
+				]
+			},
+			{
+				"name": "fractal",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "layer_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "persistence_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "lacunarity_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "numoctaves_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "fractal_layer",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "interp_type_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "rotation",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					},
+					{
+						"name": "angle",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0.5"
+					},
+					{
+						"name": "ax",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0"
+					},
+					{
+						"name": "ay",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0"
+					},
+					{
+						"name": "az",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "gain",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_bumpmap_light",
+				"return_type": "Vector3",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_bumpmap_spacing",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_color_2d",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_color_2dv",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_color_3d",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_color_3dv",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_color_4d",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "w",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_color_6d",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "w",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "u",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_expression",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_format",
+				"return_type": "enum.AccidentalNoise::Format",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_function",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_image",
+				"return_type": "Image",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "width",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "height",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_last_function",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_mode",
+				"return_type": "enum.AccidentalNoise::MappingModes",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_noise_2d",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_noise_2dv",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_noise_3d",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_noise_3dv",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pos",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_noise_4d",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "w",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_noise_6d",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "x",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "y",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "z",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "w",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "u",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "v",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_normalmap_spacing",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_ranges",
+				"return_type": "AABB",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_seamless_image",
+				"return_type": "Image",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "width",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "height",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_texture",
+				"return_type": "Texture",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "width",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "height",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_var",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "gradient_basis",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "interp_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "hex_bump",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "hex_tile",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "is_bumpmap_wrapped",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_normalmap_normalized",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_normalmap_wrapped",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "linear_step",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "max_sequence",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "base_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "number",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "stride",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "maximum",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "min_sequence",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "base_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "number",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "stride",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "minimum",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "mix",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "multiply",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "multiply_sequence",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "base_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "number",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "stride",
+						"type": "int",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "one",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "pi",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "point5",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "pow",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "radial",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "randomize",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "ridged_layer",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "interp_type_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "rotation",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					},
+					{
+						"name": "angle",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0.5"
+					},
+					{
+						"name": "ax",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0"
+					},
+					{
+						"name": "ay",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "0"
+					},
+					{
+						"name": "az",
+						"type": "float",
+						"has_default_value": true,
+						"default_value": "1"
+					}
+				]
+			},
+			{
+				"name": "ridged_multifractal",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "interp_type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "numoctaves",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "frequency",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "rotation",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					}
+				]
+			},
+			{
+				"name": "rotate",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "angle_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "ax_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "ay_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "az_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_offset",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "offset",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_u",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_v",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_w",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_x",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_y",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "scale_z",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "scale_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "seed",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "seeder",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "select",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "threshold_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "falloff_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_bumpmap_light",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "bumpmap_light",
+						"type": "Vector3",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_bumpmap_spacing",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "bumpmap_spacing",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_bumpmap_wrapped",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "bumpmap_wrapped",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_expression",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "expression",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_format",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "format",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_function",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "arg0",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_mode",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "mode",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_normalmap_normalized",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "normalmap_normalized",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_normalmap_spacing",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "normalmap_spacing",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_normalmap_wrapped",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "normalmap_wrapped",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_ranges",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "ranges",
+						"type": "AABB",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_var",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "sigmoid",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "simplex_basis",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "sin",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "smooth_step",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "smooth_tiers",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "num_tiers_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "smoother_step",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "low_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "high_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "sqrt2",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "step",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "val_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "control_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "subtract",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src1_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "src2_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "tan",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "tiers",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "num_tiers_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate_u",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate_v",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate_w",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate_x",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate_y",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "translate_z",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "src_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "translate_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "u",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "v",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "value_basis",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "interp_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "seed_index",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "w",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "x",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "y",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "z",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "zero",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "MappingModes",
+				"values": {
+					"SEAMLESS_NONE": 0,
+					"SEAMLESS_X": 1,
+					"SEAMLESS_Y": 2,
+					"SEAMLESS_Z": 3,
+					"SEAMLESS_XY": 4,
+					"SEAMLESS_XZ": 5,
+					"SEAMLESS_YZ": 6,
+					"SEAMLESS_XYZ": 7
+				}
+			},
+			{
+				"name": "InterpolationTypes",
+				"values": {
+					"INTERP_NONE": 0,
+					"INTERP_LINEAR": 1,
+					"INTERP_HERMITE": 2,
+					"INTERP_QUINTIC": 3
+				}
+			},
+			{
+				"name": "BasisTypes",
+				"values": {
+					"BASIS_VALUE": 0,
+					"BASIS_GRADIENT": 1,
+					"BASIS_SIMPLEX": 2
+				}
+			},
+			{
+				"name": "DistanceTypes",
+				"values": {
+					"DISTANCE_EUCLID": 0,
+					"DISTANCE_MANHATTAN": 1,
+					"DISTANCE_LEASTAXIS": 2,
+					"DISTANCE_GREATESTAXIS": 3
+				}
+			},
+			{
+				"name": "Format",
+				"values": {
+					"FORMAT_HEIGHTMAP": 0,
+					"FORMAT_NORMALMAP": 1,
+					"FORMAT_BUMPMAP": 2,
+					"FORMAT_TEXTURE": 3
+				}
+			}
+		]
+	},
+	{
 		"name": "AnimatedSprite",
 		"base_class": "Node2D",
 		"api_type": "core",
@@ -4066,6 +7458,13 @@
 			"MAX_FRAMES": 256
 		},
 		"properties": [
+			{
+				"name": "current_frame",
+				"type": "int",
+				"getter": "get_current_frame",
+				"setter": "set_current_frame",
+				"index": -1
+			},
 			{
 				"name": "fps",
 				"type": "float",
@@ -7663,6 +11062,20 @@
 				"getter": "get_frames",
 				"setter": "set_frames",
 				"index": -1
+			},
+			{
+				"name": "oneshot",
+				"type": "bool",
+				"getter": "get_oneshot",
+				"setter": "set_oneshot",
+				"index": -1
+			},
+			{
+				"name": "pause",
+				"type": "bool",
+				"getter": "get_pause",
+				"setter": "set_pause",
+				"index": -1
 			}
 		],
 		"signals": [
@@ -7676,6 +11089,19 @@
 				"is_const": false,
 				"is_reverse": false,
 				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_current_frame",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
 				"has_varargs": false,
 				"is_from_script": false,
 				"arguments": [
@@ -7743,6 +11169,51 @@
 				"has_varargs": false,
 				"is_from_script": false,
 				"arguments": [
+				]
+			},
+			{
+				"name": "get_oneshot",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_pause",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_current_frame",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "frame",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
 				]
 			},
 			{
@@ -7828,6 +11299,44 @@
 					{
 						"name": "frames",
 						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_oneshot",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "oneshot",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_pause",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "pause",
+						"type": "bool",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -51436,6 +54945,75 @@
 		]
 	},
 	{
+		"name": "DTLSServer",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "setup",
+				"return_type": "enum.Error",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "key",
+						"type": "CryptoKey",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "certificate",
+						"type": "X509Certificate",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "chain",
+						"type": "X509Certificate",
+						"has_default_value": true,
+						"default_value": "[Object:null]"
+					}
+				]
+			},
+			{
+				"name": "take_connection",
+				"return_type": "PacketPeerDTLS",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "udp_peer",
+						"type": "PacketPeerUDP",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
 		"name": "DampedSpringJoint2D",
 		"base_class": "Joint2D",
 		"api_type": "core",
@@ -66853,6 +70431,9 @@
 			"PARAM_ANGULAR_MOTOR_FORCE_LIMIT": 18,
 			"PARAM_ANGULAR_MOTOR_TARGET_VELOCITY": 17,
 			"PARAM_ANGULAR_RESTITUTION": 14,
+			"PARAM_ANGULAR_SPRING_DAMPING": 20,
+			"PARAM_ANGULAR_SPRING_EQUILIBRIUM_POINT": 21,
+			"PARAM_ANGULAR_SPRING_STIFFNESS": 19,
 			"PARAM_ANGULAR_UPPER_LIMIT": 11,
 			"PARAM_LINEAR_DAMPING": 4,
 			"PARAM_LINEAR_LIMIT_SOFTNESS": 2,
@@ -66860,6 +70441,9 @@
 			"PARAM_LINEAR_MOTOR_FORCE_LIMIT": 6,
 			"PARAM_LINEAR_MOTOR_TARGET_VELOCITY": 5,
 			"PARAM_LINEAR_RESTITUTION": 3,
+			"PARAM_LINEAR_SPRING_DAMPING": 8,
+			"PARAM_LINEAR_SPRING_EQUILIBRIUM_POINT": 9,
+			"PARAM_LINEAR_SPRING_STIFFNESS": 7,
 			"PARAM_LINEAR_UPPER_LIMIT": 1,
 			"PARAM_MAX": 22
 		},
@@ -67963,6 +71547,9 @@
 					"PARAM_LINEAR_DAMPING": 4,
 					"PARAM_LINEAR_MOTOR_TARGET_VELOCITY": 5,
 					"PARAM_LINEAR_MOTOR_FORCE_LIMIT": 6,
+					"PARAM_LINEAR_SPRING_STIFFNESS": 7,
+					"PARAM_LINEAR_SPRING_DAMPING": 8,
+					"PARAM_LINEAR_SPRING_EQUILIBRIUM_POINT": 9,
 					"PARAM_ANGULAR_LOWER_LIMIT": 10,
 					"PARAM_ANGULAR_UPPER_LIMIT": 11,
 					"PARAM_ANGULAR_LIMIT_SOFTNESS": 12,
@@ -67972,6 +71559,9 @@
 					"PARAM_ANGULAR_ERP": 16,
 					"PARAM_ANGULAR_MOTOR_TARGET_VELOCITY": 17,
 					"PARAM_ANGULAR_MOTOR_FORCE_LIMIT": 18,
+					"PARAM_ANGULAR_SPRING_STIFFNESS": 19,
+					"PARAM_ANGULAR_SPRING_DAMPING": 20,
+					"PARAM_ANGULAR_SPRING_EQUILIBRIUM_POINT": 21,
 					"PARAM_MAX": 22
 				}
 			},
@@ -74201,6 +77791,19 @@
 				]
 			},
 			{
+				"name": "save_png_to_buffer",
+				"return_type": "PoolByteArray",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
 				"name": "set_pixel",
 				"return_type": "void",
 				"is_editor": false,
@@ -77145,7 +80748,7 @@
 				"return_type": "float",
 				"is_editor": false,
 				"is_noscript": false,
-				"is_const": false,
+				"is_const": true,
 				"is_reverse": false,
 				"is_virtual": false,
 				"has_varargs": false,
@@ -92589,6 +96192,13 @@
 				"index": -1
 			},
 			{
+				"name": "dtls_verify",
+				"type": "bool",
+				"getter": "is_dtls_verify_enabled",
+				"setter": "set_dtls_verify_enabled",
+				"index": -1
+			},
+			{
 				"name": "server_relay",
 				"type": "bool",
 				"getter": "is_server_relay_enabled",
@@ -92600,6 +96210,13 @@
 				"type": "int",
 				"getter": "get_transfer_channel",
 				"setter": "set_transfer_channel",
+				"index": -1
+			},
+			{
+				"name": "use_dtls",
+				"type": "bool",
+				"getter": "is_dtls_enabled",
+				"setter": "set_dtls_enabled",
 				"index": -1
 			}
 		],
@@ -92847,6 +96464,32 @@
 				]
 			},
 			{
+				"name": "is_dtls_enabled",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_dtls_verify_enabled",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
 				"name": "is_server_relay_enabled",
 				"return_type": "bool",
 				"is_editor": false,
@@ -92930,6 +96573,82 @@
 					{
 						"name": "mode",
 						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_dtls_certificate",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "certificate",
+						"type": "X509Certificate",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_dtls_enabled",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_dtls_key",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "key",
+						"type": "CryptoKey",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_dtls_verify_enabled",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -95508,6 +99227,20 @@
 				"index": -1
 			},
 			{
+				"name": "skew",
+				"type": "float",
+				"getter": "get_skew",
+				"setter": "set_skew",
+				"index": -1
+			},
+			{
+				"name": "skew_degrees",
+				"type": "float",
+				"getter": "get_skew_degrees",
+				"setter": "set_skew_degrees",
+				"index": -1
+			},
+			{
 				"name": "transform",
 				"type": "Transform2D",
 				"getter": "get_transform",
@@ -95683,6 +99416,32 @@
 			{
 				"name": "get_scale",
 				"return_type": "Vector2",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_skew",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_skew_degrees",
+				"return_type": "float",
 				"is_editor": false,
 				"is_noscript": false,
 				"is_const": true,
@@ -95992,6 +99751,44 @@
 					{
 						"name": "scale",
 						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_skew",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "radians",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_skew_degrees",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "degrees",
+						"type": "float",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -99284,6 +103081,116 @@
 		]
 	},
 	{
+		"name": "PacketPeerDTLS",
+		"base_class": "PacketPeer",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"STATUS_CONNECTED": 2,
+			"STATUS_DISCONNECTED": 0,
+			"STATUS_ERROR": 3,
+			"STATUS_ERROR_HOSTNAME_MISMATCH": 4,
+			"STATUS_HANDSHAKING": 1
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "connect_to_peer",
+				"return_type": "enum.Error",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "packet_peer",
+						"type": "PacketPeerUDP",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "validate_certs",
+						"type": "bool",
+						"has_default_value": true,
+						"default_value": "True"
+					},
+					{
+						"name": "for_hostname",
+						"type": "String",
+						"has_default_value": true,
+						"default_value": ""
+					},
+					{
+						"name": "valid_certificate",
+						"type": "X509Certificate",
+						"has_default_value": true,
+						"default_value": "[Object:null]"
+					}
+				]
+			},
+			{
+				"name": "disconnect_from_peer",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_status",
+				"return_type": "enum.PacketPeerDTLS::Status",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "poll",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "Status",
+				"values": {
+					"STATUS_DISCONNECTED": 0,
+					"STATUS_HANDSHAKING": 1,
+					"STATUS_CONNECTED": 2,
+					"STATUS_ERROR": 3,
+					"STATUS_ERROR_HOSTNAME_MISMATCH": 4
+				}
+			}
+		]
+	},
+	{
 		"name": "PacketPeerGDNative",
 		"base_class": "PacketPeer",
 		"api_type": "core",
@@ -99467,6 +103374,31 @@
 				]
 			},
 			{
+				"name": "connect_to_host",
+				"return_type": "enum.Error",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "host",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
 				"name": "get_packet_ip",
 				"return_type": "String",
 				"is_editor": false,
@@ -99482,6 +103414,19 @@
 			{
 				"name": "get_packet_port",
 				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_connected_to_host",
+				"return_type": "bool",
 				"is_editor": false,
 				"is_noscript": false,
 				"is_const": true,
@@ -115942,6 +119887,19 @@
 				]
 			},
 			{
+				"name": "get_current_index",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
 				"name": "get_item_accelerator",
 				"return_type": "int",
 				"is_editor": false,
@@ -118233,12 +122191,6 @@
 						"type": "bool",
 						"has_default_value": true,
 						"default_value": "True"
-					},
-					{
-						"name": "destination",
-						"type": "String",
-						"has_default_value": true,
-						"default_value": ""
 					}
 				]
 			},
@@ -122383,25 +126335,6 @@
 		]
 	},
 	{
-		"name": "ResourceFormatLoaderCrypto",
-		"base_class": "ResourceFormatLoader",
-		"api_type": "core",
-		"singleton": false,
-		"singleton_name": "",
-		"instanciable": false,
-		"is_reference": true,
-		"constants": {
-		},
-		"properties": [
-		],
-		"signals": [
-		],
-		"methods": [
-		],
-		"enums": [
-		]
-	},
-	{
 		"name": "ResourceFormatSaver",
 		"base_class": "Reference",
 		"api_type": "core",
@@ -122485,25 +126418,6 @@
 					}
 				]
 			}
-		],
-		"enums": [
-		]
-	},
-	{
-		"name": "ResourceFormatSaverCrypto",
-		"base_class": "ResourceFormatSaver",
-		"api_type": "core",
-		"singleton": false,
-		"singleton_name": "",
-		"instanciable": false,
-		"is_reference": true,
-		"constants": {
-		},
-		"properties": [
-		],
-		"signals": [
-		],
-		"methods": [
 		],
 		"enums": [
 		]
@@ -147337,6 +151251,31 @@
 				]
 			},
 			{
+				"name": "set_line",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "line",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "new_text",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
 				"name": "set_line_as_hidden",
 				"return_type": "void",
 				"is_editor": false,
@@ -155943,6 +159882,25 @@
 				]
 			},
 			{
+				"name": "get_suffix",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "column",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
 				"name": "get_text",
 				"return_type": "String",
 				"is_editor": false,
@@ -156753,6 +160711,31 @@
 					{
 						"name": "selectable",
 						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_suffix",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "column",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "text",
+						"type": "String",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -157890,6 +161873,102 @@
 					"EASE_OUT_IN": 3
 				}
 			}
+		]
+	},
+	{
+		"name": "UDPServer",
+		"base_class": "Reference",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "is_connection_available",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_listening",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "listen",
+				"return_type": "enum.Error",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "bind_address",
+						"type": "String",
+						"has_default_value": true,
+						"default_value": "*"
+					}
+				]
+			},
+			{
+				"name": "stop",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "take_connection",
+				"return_type": "PacketPeerUDP",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			}
+		],
+		"enums": [
 		]
 	},
 	{
@@ -162870,6 +166949,3038 @@
 					{
 						"name": "rect",
 						"type": "Rect2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoise",
+		"base_class": "AccidentalNoise",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "clamp_high",
+				"type": "float",
+				"getter": "get_clamp_high",
+				"setter": "set_clamp_high",
+				"index": -1
+			},
+			{
+				"name": "clamp_low",
+				"type": "float",
+				"getter": "get_clamp_low",
+				"setter": "set_clamp_low",
+				"index": -1
+			},
+			{
+				"name": "clamp_output",
+				"type": "bool",
+				"getter": "is_clamping_enabled",
+				"setter": "set_clamping_enabled",
+				"index": -1
+			},
+			{
+				"name": "component",
+				"type": "VisualAccidentalNoiseNodeComponent",
+				"getter": "get_component",
+				"setter": "set_component",
+				"index": -1
+			}
+		],
+		"signals": [
+			{
+				"name": "component_changed",
+				"arguments": [
+				]
+			}
+		],
+		"methods": [
+			{
+				"name": "_component_updated",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_queue_update",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "_update_noise",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "generate",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_clamp_high",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_clamp_low",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_component",
+				"return_type": "VisualAccidentalNoiseNodeComponent",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_clamping_enabled",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_clamp_high",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_clamp_low",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_clamping_enabled",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "enabled",
+						"type": "bool",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_component",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "component",
+						"type": "VisualAccidentalNoiseNodeComponent",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNode",
+		"base_class": "Resource",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": false,
+		"is_reference": true,
+		"constants": {
+			"Axis::AXIS_DOMAIN": 0,
+			"Axis::AXIS_U": 5,
+			"Axis::AXIS_V": 6,
+			"Axis::AXIS_W": 4,
+			"Axis::AXIS_X": 1,
+			"Axis::AXIS_Y": 2,
+			"Axis::AXIS_Z": 3
+		},
+		"properties": [
+			{
+				"name": "default_input_values",
+				"type": "Array",
+				"getter": "get_default_input_values",
+				"setter": "set_default_input_values",
+				"index": -1
+			},
+			{
+				"name": "output_port_for_preview",
+				"type": "int",
+				"getter": "get_output_port_for_preview",
+				"setter": "set_output_port_for_preview",
+				"index": -1
+			}
+		],
+		"signals": [
+			{
+				"name": "editor_refresh_request",
+				"arguments": [
+				]
+			}
+		],
+		"methods": [
+			{
+				"name": "get_default_input_values",
+				"return_type": "Array",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_input_port_default_value",
+				"return_type": "Variant",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_output_port_for_preview",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_default_input_values",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "values",
+						"type": "Array",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_input_port_default_value",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "value",
+						"type": "Variant",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_output_port_for_preview",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "AxisType",
+				"values": {
+					"Axis::AXIS_DOMAIN": 0,
+					"Axis::AXIS_X": 1,
+					"Axis::AXIS_Y": 2,
+					"Axis::AXIS_Z": 3,
+					"Axis::AXIS_W": 4,
+					"Axis::AXIS_U": 5,
+					"Axis::AXIS_V": 6
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeCellularBasis",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "distance",
+				"type": "int",
+				"getter": "get_distance",
+				"setter": "set_distance",
+				"index": -1
+			},
+			{
+				"name": "seed",
+				"type": "int",
+				"getter": "get_seed",
+				"setter": "set_seed",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_distance",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_seed",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_distance",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_seed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeClamp",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeColor",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "color",
+				"type": "Color",
+				"getter": "get_color",
+				"setter": "set_color",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_color",
+				"return_type": "Color",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_color",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "color",
+						"type": "Color",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeColorCombine",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"COMBINE_HSVA": 1,
+			"COMBINE_RGBA": 0
+		},
+		"properties": [
+			{
+				"name": "type",
+				"type": "int",
+				"getter": "get_type",
+				"setter": "set_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_type",
+				"return_type": "enum.VisualAccidentalNoiseNodeColorCombine::CombineMode",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "CombineMode",
+				"values": {
+					"COMBINE_RGBA": 0,
+					"COMBINE_HSVA": 1
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeComponent",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"NODE_ID_INVALID": -1,
+			"NODE_ID_OUTPUT": 0
+		},
+		"properties": [
+			{
+				"name": "graph_offset",
+				"type": "Vector2",
+				"getter": "get_graph_offset",
+				"setter": "set_graph_offset",
+				"index": -1
+			},
+			{
+				"name": "name",
+				"type": "String",
+				"getter": "get_component_name",
+				"setter": "set_component_name",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "_notify_changed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": true,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "add_node",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "node",
+						"type": "VisualAccidentalNoiseNode",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "position",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "can_connect_nodes",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "from_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "from_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "connect_nodes",
+				"return_type": "enum.Error",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "from_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "from_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "disconnect_nodes",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "from_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "from_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "evaluate",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "noise",
+						"type": "VisualAccidentalNoise",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_component_name",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_graph_offset",
+				"return_type": "Vector2",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_node",
+				"return_type": "VisualAccidentalNoiseNode",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_node_connections",
+				"return_type": "Array",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_node_list",
+				"return_type": "PoolIntArray",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_node_position",
+				"return_type": "Vector2",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "get_valid_node_id",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "is_node_connection",
+				"return_type": "bool",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "from_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "from_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_node",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "to_port",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "remove_node",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_component_name",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_graph_offset",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "offset",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_node_position",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "id",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					},
+					{
+						"name": "position",
+						"type": "Vector2",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeCurveSection",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeDerivative",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "axis",
+				"type": "int",
+				"getter": "get_axis",
+				"setter": "set_axis",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_axis",
+				"return_type": "enum.Axis::AxisType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_axis",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "axis",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeExpression",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "expression",
+				"type": "String",
+				"getter": "get_expression",
+				"setter": "set_expression",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_expression",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_expression",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeFractal",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeFractalLayer",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"LAYER_BILLOW": 2,
+			"LAYER_FRACTAL": 0,
+			"LAYER_RIDGED": 1
+		},
+		"properties": [
+			{
+				"name": "basis",
+				"type": "int",
+				"getter": "get_basis",
+				"setter": "set_basis",
+				"index": -1
+			},
+			{
+				"name": "type",
+				"type": "int",
+				"getter": "get_type",
+				"setter": "set_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_basis",
+				"return_type": "enum.AccidentalNoise::BasisTypes",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_type",
+				"return_type": "enum.VisualAccidentalNoiseNodeFractalLayer::LayerType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_basis",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "LayerType",
+				"values": {
+					"LAYER_FRACTAL": 0,
+					"LAYER_RIDGED": 1,
+					"LAYER_BILLOW": 2
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeFractalVariant",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"TYPE_BILLOW": 2,
+			"TYPE_FBM": 0,
+			"TYPE_RIDGED_MULTIFRACTAL": 1
+		},
+		"properties": [
+			{
+				"name": "basis",
+				"type": "int",
+				"getter": "get_basis",
+				"setter": "set_basis",
+				"index": -1
+			},
+			{
+				"name": "interpolation",
+				"type": "int",
+				"getter": "get_interpolation",
+				"setter": "set_interpolation",
+				"index": -1
+			},
+			{
+				"name": "type",
+				"type": "int",
+				"getter": "get_type",
+				"setter": "set_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_basis",
+				"return_type": "enum.AccidentalNoise::BasisTypes",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_interpolation",
+				"return_type": "enum.AccidentalNoise::InterpolationTypes",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_type",
+				"return_type": "enum.VisualAccidentalNoiseNodeFractalVariant::FractalType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_basis",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "basis",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_interpolation",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "interpolation",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "FractalType",
+				"values": {
+					"TYPE_FBM": 0,
+					"TYPE_RIDGED_MULTIFRACTAL": 1,
+					"TYPE_BILLOW": 2
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeGetVar",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "var",
+				"type": "String",
+				"getter": "get_var",
+				"setter": "set_var",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_var",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_var",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "var",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeGradient",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "axis",
+				"type": "int",
+				"getter": "get_axis",
+				"setter": "set_axis",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_axis",
+				"return_type": "enum.Axis::AxisType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_axis",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "axis",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeGradientBasis",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "interpolation",
+				"type": "int",
+				"getter": "get_interpolation",
+				"setter": "set_interpolation",
+				"index": -1
+			},
+			{
+				"name": "seed",
+				"type": "int",
+				"getter": "get_seed",
+				"setter": "set_seed",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_interpolation",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_seed",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_interpolation",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_seed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeHex",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"HEX_BUMP": 1,
+			"HEX_TILE": 0
+		},
+		"properties": [
+			{
+				"name": "type",
+				"type": "int",
+				"getter": "get_type",
+				"setter": "set_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_type",
+				"return_type": "enum.VisualAccidentalNoiseNodeHex::HexType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "HexType",
+				"values": {
+					"HEX_TILE": 0,
+					"HEX_BUMP": 1
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeInput",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "input_name",
+				"type": "String",
+				"getter": "get_input_name",
+				"setter": "set_input_name",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_input_name",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_input_name",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeMix",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeOutput",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": false,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeRadial",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeRandomize",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeReroute",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeRotate",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeScalar",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"SCALAR_CONSTANT": 0,
+			"SCALAR_E": 2,
+			"SCALAR_ONE": 3,
+			"SCALAR_PI": 1,
+			"SCALAR_POINT5": 5,
+			"SCALAR_SQRT2": 6,
+			"SCALAR_ZERO": 4
+		},
+		"properties": [
+			{
+				"name": "constant",
+				"type": "float",
+				"getter": "get_constant",
+				"setter": "set_constant",
+				"index": -1
+			},
+			{
+				"name": "type",
+				"type": "int",
+				"getter": "get_type",
+				"setter": "set_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_constant",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_type",
+				"return_type": "enum.VisualAccidentalNoiseNodeScalar::ScalarType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_constant",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "ScalarType",
+				"values": {
+					"SCALAR_CONSTANT": 0,
+					"SCALAR_PI": 1,
+					"SCALAR_E": 2,
+					"SCALAR_ONE": 3,
+					"SCALAR_ZERO": 4,
+					"SCALAR_POINT5": 5,
+					"SCALAR_SQRT2": 6
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeScalarFunc",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"FUNC_ABS": 6,
+			"FUNC_ACOS": 3,
+			"FUNC_ASIN": 4,
+			"FUNC_ATAN": 5,
+			"FUNC_COS": 0,
+			"FUNC_SIGMOID": 7,
+			"FUNC_SIN": 1,
+			"FUNC_TAN": 2
+		},
+		"properties": [
+			{
+				"name": "function",
+				"type": "int",
+				"getter": "get_function",
+				"setter": "set_function",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_function",
+				"return_type": "enum.VisualAccidentalNoiseNodeScalarFunc::Function",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_function",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "function",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "Function",
+				"values": {
+					"FUNC_COS": 0,
+					"FUNC_SIN": 1,
+					"FUNC_TAN": 2,
+					"FUNC_ACOS": 3,
+					"FUNC_ASIN": 4,
+					"FUNC_ATAN": 5,
+					"FUNC_ABS": 6,
+					"FUNC_SIGMOID": 7
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeScalarOp",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"OP_ADD": 0,
+			"OP_BIAS": 7,
+			"OP_DIV": 3,
+			"OP_GAIN": 8,
+			"OP_MAX": 5,
+			"OP_MIN": 6,
+			"OP_MUL": 2,
+			"OP_POW": 4,
+			"OP_SUB": 1
+		},
+		"properties": [
+			{
+				"name": "operator",
+				"type": "int",
+				"getter": "get_operator",
+				"setter": "set_operator",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_operator",
+				"return_type": "enum.VisualAccidentalNoiseNodeScalarOp::Operator",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_operator",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "operator",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "Operator",
+				"values": {
+					"OP_ADD": 0,
+					"OP_SUB": 1,
+					"OP_MUL": 2,
+					"OP_DIV": 3,
+					"OP_POW": 4,
+					"OP_MAX": 5,
+					"OP_MIN": 6,
+					"OP_BIAS": 7,
+					"OP_GAIN": 8
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeScale",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "axis",
+				"type": "int",
+				"getter": "get_axis",
+				"setter": "set_axis",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_axis",
+				"return_type": "enum.Axis::AxisType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_axis",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "axis",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeScaleOffset",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "offset",
+				"type": "float",
+				"getter": "get_offset",
+				"setter": "set_offset",
+				"index": -1
+			},
+			{
+				"name": "scale",
+				"type": "float",
+				"getter": "get_scale",
+				"setter": "set_scale",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_offset",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_scale",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_offset",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "offset",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_scale",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "scale",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeSeed",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "seed",
+				"type": "float",
+				"getter": "get_seed",
+				"setter": "set_seed",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_seed",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_seed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "seed",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeSeeder",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeSelect",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+		],
+		"signals": [
+		],
+		"methods": [
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeSequence",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "input_count",
+				"type": "int",
+				"getter": "get_input_count",
+				"setter": "set_input_count",
+				"index": -1
+			},
+			{
+				"name": "operator",
+				"type": "int",
+				"getter": "get_operator",
+				"setter": "set_operator",
+				"index": -1
+			},
+			{
+				"name": "selected_input",
+				"type": "int",
+				"getter": "get_selected_input",
+				"setter": "set_selected_input",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_input_count",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_operator",
+				"return_type": "enum.VisualAccidentalNoiseNodeSequence::Operator",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_selected_input",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_input_count",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "input_count",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_operator",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "operator",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_selected_input",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "selected_input",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeSetVar",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "value",
+				"type": "float",
+				"getter": "get_value",
+				"setter": "set_value",
+				"index": -1
+			},
+			{
+				"name": "var",
+				"type": "String",
+				"getter": "get_var",
+				"setter": "set_var",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_value",
+				"return_type": "float",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_var",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_value",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "float",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_var",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "var",
+						"type": "String",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeSimplexBasis",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "seed",
+				"type": "int",
+				"getter": "get_seed",
+				"setter": "set_seed",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_seed",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_seed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeStep",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+			"STEP_LINEAR": 1,
+			"STEP_REGULAR": 0,
+			"STEP_SMOOTH": 2,
+			"STEP_SMOOTHER": 3
+		},
+		"properties": [
+			{
+				"name": "type",
+				"type": "int",
+				"getter": "get_type",
+				"setter": "set_type",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_type",
+				"return_type": "enum.VisualAccidentalNoiseNodeStep::StepType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_type",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "type",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+			{
+				"name": "StepType",
+				"values": {
+					"STEP_REGULAR": 0,
+					"STEP_LINEAR": 1,
+					"STEP_SMOOTH": 2,
+					"STEP_SMOOTHER": 3
+				}
+			}
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeTiers",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "smooth",
+				"type": "int",
+				"getter": "get_smooth",
+				"setter": "set_smooth",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_smooth",
+				"return_type": "enum.VisualAccidentalNoiseNodeTiers::Smoothness",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_smooth",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "smooth",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeTranslate",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "axis",
+				"type": "int",
+				"getter": "get_axis",
+				"setter": "set_axis",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_axis",
+				"return_type": "enum.Axis::AxisType",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_axis",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "axis",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			}
+		],
+		"enums": [
+		]
+	},
+	{
+		"name": "VisualAccidentalNoiseNodeValueBasis",
+		"base_class": "VisualAccidentalNoiseNode",
+		"api_type": "core",
+		"singleton": false,
+		"singleton_name": "",
+		"instanciable": true,
+		"is_reference": true,
+		"constants": {
+		},
+		"properties": [
+			{
+				"name": "interpolation",
+				"type": "int",
+				"getter": "get_interpolation",
+				"setter": "set_interpolation",
+				"index": -1
+			},
+			{
+				"name": "seed",
+				"type": "int",
+				"getter": "get_seed",
+				"setter": "set_seed",
+				"index": -1
+			}
+		],
+		"signals": [
+		],
+		"methods": [
+			{
+				"name": "get_interpolation",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_seed",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "set_interpolation",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_seed",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "value",
+						"type": "int",
 						"has_default_value": false,
 						"default_value": ""
 					}
@@ -193788,6 +200899,13 @@
 				"index": -1
 			},
 			{
+				"name": "tablet_driver",
+				"type": "String",
+				"getter": "get_current_tablet_driver",
+				"setter": "set_current_tablet_driver",
+				"index": -1
+			},
+			{
 				"name": "vsync_enabled",
 				"type": "bool",
 				"getter": "is_vsync_enabled",
@@ -194163,6 +201281,19 @@
 			{
 				"name": "get_current_screen",
 				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_current_tablet_driver",
+				"return_type": "String",
 				"is_editor": false,
 				"is_noscript": false,
 				"is_const": true,
@@ -194693,6 +201824,38 @@
 				"has_varargs": false,
 				"is_from_script": false,
 				"arguments": [
+				]
+			},
+			{
+				"name": "get_tablet_driver_count",
+				"return_type": "int",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+				]
+			},
+			{
+				"name": "get_tablet_driver_name",
+				"return_type": "String",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": true,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "idx",
+						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
 				]
 			},
 			{
@@ -195587,6 +202750,25 @@
 					{
 						"name": "screen",
 						"type": "int",
+						"has_default_value": false,
+						"default_value": ""
+					}
+				]
+			},
+			{
+				"name": "set_current_tablet_driver",
+				"return_type": "void",
+				"is_editor": false,
+				"is_noscript": false,
+				"is_const": false,
+				"is_reverse": false,
+				"is_virtual": false,
+				"has_varargs": false,
+				"is_from_script": false,
+				"arguments": [
+					{
+						"name": "name",
+						"type": "String",
 						"has_default_value": false,
 						"default_value": ""
 					}
